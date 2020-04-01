@@ -128,7 +128,7 @@ nav input {
     margin-bottom: 40px;
 }
 
-#googleMap{
+#gmap_canvas{
     width:60%;
     height:400px;
 }
@@ -157,7 +157,10 @@ nav input {
 #packing input{
     width: 50px;
 }
-
+select{
+    padding: 20px;
+    color: red;
+}
 #contact{
     display: flex;
     flex-direction: column;
