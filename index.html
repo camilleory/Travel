@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+<link rel="stylesheet" href="stylesheets.css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+
+
+</head>
+<body>
+<header>
+<nav>
+  <ul class="nav-ul">
+    <li> <a href="#">Home</a> </li>
+    <li><a href="#get-ready">Get Ready</a></li>
+    <li> <a href="">Contact</a></li>
+    <li> <a href="">About</a></li>
+  </ul>
+  <input type="text" placeholder="Search">
+</nav>
+</header>
+<main>
+<section id="title">
+  <h1>Travelling is great !</h1>
+  <p>Tipps and tricks for independent travellers</p>
+</section>
+<div id="first-second-title">
+<h1>Let's get started !</h1>
+</div>
+<section id="get-ready">
+  <div class="articles">
+  <a href="#destinations">
+    <article>
+    <img src="pngfuel.com.png" alt="map-finder"> 
+    <h2>Fun destinations</h2>
+    <p>Which part of the world do you want to disover? </p>
+  </article>
+</a>
+  <article>
+    <img src="Calender.png" alt="calender">
+    <h2>Plan you trip</h2>
+  <p>A bit of organisation for a better trip.</p>
+</article>
+</div>
+<div class="articles">
+  <a href="#packing">
+  <article>
+    <img src="suitcase.png" alt="suitcase">
+    <h2> What you should pack</h2>
+    <p>Some very useful items</p>
+  </article>
+</a>
+  <article>
+    <img src="tip-icon-6.jpg" alt="lightbulb">
+    <h2>Tipps and tricks</h2> 
+  <p>to help you survive</p>
+  </article>
+</div>
+</section>
+<section id="destinations">
+  <div>
+    <h2>Pick a place !</h2>
+  </div>
+  <div id="googleMap"></div>
+</section>
+<section id="packing">
+  <div>
+    <h2>Got everything ?</h2>
+  <p>Select your destination - your packing list will be adapted.</p>
+</div>
+  <div><select id="cars" name="cars">
+    <option value="volvo">Europe</option>
+    <option value="saab">Asia</option>
+    <option value="fiat">Americas</option>
+    <option value="audi">Africa</option>
+    <option value="audi">Australia</option>
+
+  </select></div>
+  <ul>
+<li>
+<div class="pretty p-default p-round">
+  <input type="checkbox" />
+  <div class="state p-info">
+      <label>Camera</label>
+  </div>
+</div>
+</li>
+<li>
+  <div class="pretty p-default p-round">
+    <input type="checkbox" />
+    <div class="state p-info">
+        <label>Default</label>
+    </div>
+  </div>
+  </li>
+  <li>
+    <div class="pretty p-default p-round">
+      <input type="checkbox" />
+      <div class="state p-info">
+          <label>Default</label>
+      </div>
+    </div>
+    </li>
+</div>
+
+</li>
+  </ul>
+</section>
+<section id="contact">
+  <h1>Contact</h1>
+  <p>Wanna get in touch ? Fill in the form !</p>
+  <form action="post">
+    <div><label>Name:</label><input type="text" placeholder="Enter your name"></div>
+    <div><label>Email:</label><input type="email" placeholder="example@hotmail.com"></div>
+   <div> <label>Message:</label><input id="text-input" type="text"placeholder="Leave your message"></div>
+</form>
+
+
+</section>
+</main>
+<footer>
+
+</footer>
+
+<script src="index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>
