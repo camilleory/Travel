@@ -81,7 +81,7 @@ nav input {
     display: flex;
     justify-content: center;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
 }
 #get-ready h1{
     font-size: 40px;;
@@ -95,12 +95,12 @@ nav input {
     width: 200px;
     padding: 30px;
     margin: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     border: solid RGB(135, 206, 250) 2px;
     border-radius: 10px;
     height: 200px;
-  
 }
+
 #get-ready a:link{
     text-decoration: none;
 }
@@ -157,10 +157,7 @@ nav input {
 #packing input{
     width: 50px;
 }
-select{
-    padding: 20px;
-    color: red;
-}
+
 #contact{
     display: flex;
     flex-direction: column;
@@ -193,4 +190,33 @@ select{
     width: 80%;
 
 }
+
+#pack-items{
+    display: flex;
+    margin: 50px;
+}
+
+.packing-stuff{
+    width: 200px;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom: 40px;
+    border: solid RGB(135, 206, 250) 2px;
+    border-radius: 10px;
+    height: 250px;
+}
+#pack-items h2{
+    font-size: 20px;
+}
+
+#pack-items img{
+    width: 50px;
+    
+}
+
+#pack-items ul{
+    text-align: left;
+    padding-left: 0;
+}
+
 
