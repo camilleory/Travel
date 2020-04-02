@@ -224,10 +224,110 @@ nav input {
     padding: 5px;
     margin: 5px;
     width: 80%;
-
 }
 
+#planning{
+    background-color: RGB(135, 206, 250);
+    height: 300px;
+}
 
+#tips h2{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+#tips p{
+    display: flex;
+    justify-content: center;
+}
 
+#photos{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   padding: 30px;
+   margin: 30px;
+}
 
+#tips div{
+    margin: 20px;
+}
 
+#image-1{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/chefchauen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 1.0;
+}
+
+#image-2{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/colorado.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#image-3{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/alps.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#image-4{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/yosemite.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#image-5{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/nepal.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#image-6{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/nepal2.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#image-7{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/udaipur.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#image-8{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url(./Photos/utah.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
