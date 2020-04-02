@@ -80,6 +80,7 @@ nav input {
 #get-ready{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: auto;
     padding: 20px;
 }
@@ -142,6 +143,7 @@ nav input {
     padding: 20px;
 
 }
+
 #packing li{
     list-style: none;
     padding: 10px;
@@ -157,6 +159,40 @@ nav input {
 #packing input{
     width: 50px;
 }
+
+#pack-items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.packing-stuff{
+    width: 200px;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom: 40px;
+    border: solid RGB(135, 206, 250) 2px;
+    border-radius: 10px;
+    height: 250px;
+    display: none;
+}
+#pack-items h2{
+    font-size: 20px;
+}
+
+#pack-items img{
+    width: 50px;
+}
+#suitcase{
+    width: 15%;
+    margin: 20px;
+}
+#pack-items ul{
+    text-align: left;
+    padding-left: 0;
+}
+
 
 #contact{
     display: flex;
@@ -191,32 +227,7 @@ nav input {
 
 }
 
-#pack-items{
-    display: flex;
-    margin: 50px;
-}
 
-.packing-stuff{
-    width: 200px;
-    padding: 30px;
-    margin: 20px;
-    margin-bottom: 40px;
-    border: solid RGB(135, 206, 250) 2px;
-    border-radius: 10px;
-    height: 250px;
-}
-#pack-items h2{
-    font-size: 20px;
-}
 
-#pack-items img{
-    width: 50px;
-    
-}
-
-#pack-items ul{
-    text-align: left;
-    padding-left: 0;
-}
 
 

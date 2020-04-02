@@ -15,7 +15,7 @@
 <nav>
   <ul class="nav-ul">
     <li> <a href="#">Home</a> </li>
-    <li><a href="#get-ready">Get Ready</a></li>
+    <li><a href="#get-ready-title">Get Ready</a></li>
     <li> <a href="">Contact</a></li>
     <li> <a href="">About</a></li>
   </ul>
@@ -28,7 +28,7 @@
   <p>Tipps and tricks for independent travellers</p>
 </section>
 <div id="first-second-title">
-<h1>Let's get started !</h1>
+<h1 id ="get-ready-title" >Let's get started !</h1>
 </div>
 <section id="get-ready">
   <div class="articles">
@@ -71,15 +71,17 @@
     <h2>Got everything ?</h2>
   <p>Select your destination - your packing list will be adapted.</p>
 </div>
-  <div><select id="cars" name="cars">
-    <option value="volvo">Europe</option>
-    <option value="saab">Asia</option>
-    <option value="fiat">Americas</option>
-    <option value="audi">Africa</option>
-    <option value="audi">Australia</option>
+  <div><select id="continents" name="continents">
+    <option disabled selected>Select Your Country:</option>
+    <option id="Europe">Europe</option>
+    <option id="Asia">Asia</option>
+    <option id="Americas">Americas</option>
+    <option id="Africa">Africa</option>
+    <option id="Australia">Australia</option>
 
   </select>
 </div>
+  <img id="suitcase" src="suitcase.png" alt="suitcase">
   <section id="pack-items">
 <article class="packing-stuff">
   <img src="pharmacy-symbol.png" alt="pharmacy icon">
@@ -107,7 +109,7 @@
           <div class="pretty p-default p-round">
             <input type="checkbox" />
             <div class="state p-info">
-                <label>Some other items</label>
+                <label>Plasters</label>
             </div>
           </div>
           </li>
@@ -142,6 +144,74 @@
             <input type="checkbox" />
             <div class="state p-info">
                 <label>Hat</label>
+            </div>
+          </div>
+          </li>
+      </div>
+      </li>
+  </ul>
+</article>
+<article class="packing-stuff">
+  <img src="sun.png" alt="t-shirt">
+  <h2>
+    Sun protection
+  </h2>
+    <ul>
+      <li>
+      <div class="pretty p-default p-round">
+        <input type="checkbox" />
+        <div class="state p-info">
+            <label>Sun glasses</label>
+        </div>
+      </div>
+      </li>
+      <li>
+        <div class="pretty p-default p-round">
+          <input type="checkbox" />
+          <div class="state p-info">
+              <label>Sun cream</label>
+          </div>
+        </div>
+        </li>
+        <li>
+          <div class="pretty p-default p-round">
+            <input type="checkbox" />
+            <div class="state p-info">
+                <label>Scarf</label>
+            </div>
+          </div>
+          </li>
+      </div>
+      </li>
+  </ul>
+</article>
+<article class="packing-stuff">
+  <img src="swim.png" alt="swim">
+  <h2>
+    Sea stuff
+  </h2>
+    <ul>
+      <li>
+      <div class="pretty p-default p-round">
+        <input type="checkbox" />
+        <div class="state p-info">
+            <label>Swimming suit</label>
+        </div>
+      </div>
+      </li>
+      <li>
+        <div class="pretty p-default p-round">
+          <input type="checkbox" />
+          <div class="state p-info">
+              <label>Flip flops</label>
+          </div>
+        </div>
+        </li>
+        <li>
+          <div class="pretty p-default p-round">
+            <input type="checkbox" />
+            <div class="state p-info">
+                <label>Towel</label>
             </div>
           </div>
           </li>
@@ -232,10 +302,13 @@
 </section>
 </main>
 <footer>
+  <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
   Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 </footer>
 
 <script src="index.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 </body>
 </html>
