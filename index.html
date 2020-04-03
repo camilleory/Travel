@@ -16,8 +16,8 @@
   <ul class="nav-ul">
     <li> <a href="#">Home</a> </li>
     <li><a href="#get-ready-title">Get Ready</a></li>
-    <li> <a href="">Contact</a></li>
-    <li> <a href="">About</a></li>
+    <li> <a href="#contact">Contact</a></li>
+    <li> <a href="#about">About</a></li>
   </ul>
   <input type="text" placeholder="Search">
 </nav>
@@ -294,40 +294,48 @@
   </section>
 </section>
 <section id="planning">
-  This section is for planning your trip
+   section in progress
 </section>
 <section id="tips">
   <h2>Best tips</h2>
   <p>Hover the photos to get usefuls tips !</p>
   <article id = "photos">
-<div id="image-1"></div>
-<div id="image-2"></div>
-<div id="image-3"></div>
-<div id="image-4"></div>
-<div id="image-5"></div>
-<div id="image-6"></div>
-<div id="image-7"></div>
-<div id="image-8"></div>
-
-
+ <div class="hover-tip" id="image-1"> <p>Ask around</p></div>
+<div class="hover-tip"id="image-2"><p>Buy snacks</p></div>
+<div class="hover-tip"id="image-3"><p>Eat local food only</p></div>
+<div class="hover-tip"id="image-4"><p>Use public buses</p></div>
+<div class="hover-tip"id="image-5"><p>Stay calm when things go crazy</p></div>
+<div class="hover-tip"id="image-6"><p>Stay calm if you get sick</p></div>
+<div class="hover-tip"id="image-7"><p>Drink a lot</p></div>
+<div class="hover-tip"id="image-8"><p>Share this page</p></div>
 </article>
-</section>
-<section id="contact">
-  <h1>Contact</h1>
-  <p>Wanna get in touch ? Fill in the form !</p>
-  <form action="post">
-    <div><label>Name:</label><input type="text" placeholder="Enter your name"></div>
-    <div><label>Email:</label><input type="email" placeholder="example@hotmail.com"></div>
-   <div> <label>Message:</label><input id="text-input" type="text"placeholder="Leave your message"></div>
-</form>
+
+ 
 
 
 </section>
-</main>
 <footer>
-  <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
-  Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    <div id="about">
+      <h1>About</h1>
+      <p>I created this website from scratch with HTML, CSS and JS as a practice and showcase. I am currently studying web development at <a href="https://www.ironhack.com/en/web-development/berlin" target="blank">Ironhack</a> Berlin. If you want to know more about me and my projects, check my <a href="https://www.linkedin.com/in/camille-ory-653478161/" target="blank">LinkedIn</a> acount !</p>
+    </div>
+    <div id="contact">
+      <h1>Contact</h1>
+      <p>Wanna get in touch ?</p> 
+      <a href="mailto:camilla.ory@gmail.com"><img src="email.png" alt="email"></a>
+      <p>Write me an <a href="mailto:camilla.ory@gmail.com">e-mail</a> !</p>
+    </div>
+    <div id="source">
+     <h1>Sources</h1>
+      <ul>
+        <li>Icons: <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+        </li>
+        <li>Images: Camille Ory</li>
+      </ul>
+    </div> 
+
 </footer>
+</main>
 
 <script src="index.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>

@@ -194,37 +194,6 @@ nav input {
 }
 
 
-#contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: RGB(135, 206, 250);
-    padding: 20px;
-    padding-bottom: 100px;
-    color: white;
-}
-
-#contact h1{
-    font-size: 40px;
-    color: white;
-    margin-bottom: 40px;
-}
-#contact form{
-   
-}
-
-#contact div{
-    padding: 15px;
-    text-align: center;
-    width: 300px;
-}
-
-#contact input{
-    padding: 5px;
-    margin: 5px;
-    width: 80%;
-}
 
 #planning{
     background-color: RGB(135, 206, 250);
@@ -252,18 +221,30 @@ nav input {
 
 #tips div{
     margin: 20px;
+
+}
+
+.hover-tip p{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-weight: 300;
 }
 
 #image-1{
+    display: flex;
     width: 200px;
     height: 200px;
     border-radius: 6px;
+    opacity: 1.0;
     background-image: url(./Photos/chefchauen.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    opacity: 1.0;
+   
+   
 }
+
 
 #image-2{
     width: 200px;
@@ -330,4 +311,41 @@ nav input {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+}
+
+footer{
+    background-color: RGB(220, 220, 220);
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    flex-wrap: wrap;
+    
+}
+
+footer div{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+footer h1{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+footer img{
+    width: 50px;
+}
+footer a{
+    color: RGB(135, 206, 250);
+    font-weight: bold;
+}
+
+#about p{
+    text-align: justify;
+}
+
+#source ul{
+    list-style: none;
 }
