@@ -106,38 +106,15 @@ function australia() {
 
 }
 
-// Display text and more opacity to images when hovering
+// Display text on images when hovered
 
 let images = document.querySelectorAll('.hover-tip')
-
-
-// for (let i = 0; i <= images.length; i++) {
-//   images[i].onmouseover = function () {
-//     console.log('working')
-//     images[i].style.opacity = 0.5;
-//     document.querySelector('#image-1 p').style.display = 'block';
-    
-//   }
-// }
-
-// for (let i = 0; i <= images.length; i++) {
-//   images[i].onmouseout = function () {
-//     images[i].style.opacity = 1.0;
-//   }
-// }
- 
-
-//   //document.querySelector('#image-1 p').style.display = 'block';
-//  for (let i=0; i<=images.length; i++)
-//   {
-//     console.log("image:" + images[i])
-//     //images[i]('.hover-tip').style.opacity = 0.5;
-
-//   }
-
-// image1.onmouseout = function(){
-//   //document.querySelector('#image-1 p').style.display = 'none';
-//   document.querySelectorAll('.hover-tip').style.opacity = 1.0;
-
-// console.log('no hover')
-// }
+for (let i = 0; i <= images.length; i++){
+  document.querySelectorAll('.hover-tip p')[i].style.display = 'none'
+  images[i].onmouseover = function () {
+    document.querySelectorAll('.hover-tip p')[i].style.display = 'block'
+  }
+  images[i].onmouseout = function () {
+    document.querySelectorAll('.hover-tip p')[i].style.display = 'none'
+  }
+}

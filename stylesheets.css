@@ -229,6 +229,7 @@ nav input {
     font-size: 35px;
     color: white;
     font-weight: 300;
+    display: none;
 }
 
 #image-1{
@@ -237,7 +238,7 @@ nav input {
     height: 200px;
     border-radius: 6px;
     opacity: 1.0;
-    background-image: url(./Photos/chefchauen.jpg);
+    background-image: url(./Photos/grandcanyon.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -250,7 +251,7 @@ nav input {
     width: 200px;
     height: 200px;
     border-radius: 6px;
-    background-image: url(./Photos/colorado.JPG);
+    background-image: url(./Photos/DSC01993.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -278,7 +279,7 @@ nav input {
     width: 200px;
     height: 200px;
     border-radius: 6px;
-    background-image: url(./Photos/nepal.JPG);
+    background-image: url(./Photos/monumentvalley.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
