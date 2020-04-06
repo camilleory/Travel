@@ -3,7 +3,6 @@
 body{
     font-family: 'Comfortaa', cursive;
     margin: 0;
-
 }
 
 nav{
@@ -24,6 +23,10 @@ nav{
 .nav-ul li{
     padding: 10px;
 }
+nav img{
+    width: 30px;
+    display: none;
+}
 
 a{
     color: black;
@@ -42,9 +45,31 @@ nav input {
     height: 20px;
 }
 
+@media (max-width: 400px) {
+    nav input{
+        display: none;
+    }
+    nav img{
+        display: block;
+    }
+    .nav-ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav li{
+        display: none;
+    }
+    nav{
+        margin: 10px;
+    }
+}
+
 #title{
     background-image: url(./2.1_Tinghir.JPG);
     height: 700px;
+    width: 100%;
+    top: 0;
+    left: 0;
     background-size: cover;
 }
 
@@ -58,6 +83,24 @@ nav input {
     font-size: 60px;
 }
 
+@media (max-width: 400px) {
+    #title h1{
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 50px;
+    }
+
+    #title{
+        height: 500px;
+        
+    }
+}
+
+
 #title p{
     margin: 0;
     position: absolute;
@@ -68,6 +111,22 @@ nav input {
     font-size: 20px;
     font-weight: bold;
 }
+
+@media (max-width: 400px) {
+    #title p{
+        margin: 0;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        width: 250px;
+    }
+    
+}
+
 
 #first-second-title{
     display: flex;
@@ -248,6 +307,7 @@ nav input {
 
 
 #image-2{
+    display: flex;
     width: 200px;
     height: 200px;
     border-radius: 6px;

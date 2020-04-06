@@ -106,6 +106,21 @@ function australia() {
 
 }
 
+
+//Responsive navbar
+
+let menu = document.querySelector('nav img')
+let menuItems = document.querySelectorAll('nav li')
+  menu.onclick = function() {
+    for (let i=0; i<menuItems.length; i++){
+      if (menuItems[i].style.display === 'none'){
+        menuItems[i].style.display = 'block'
+    } else {
+      menuItems[i].style.display = 'none'
+    }
+  }
+}
+
 // Display text on images when hovered
 
 let images = document.querySelectorAll('.hover-tip')
