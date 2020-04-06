@@ -71,6 +71,7 @@ nav input {
     top: 0;
     left: 0;
     background-size: cover;
+
 }
 
 #title h1{
@@ -85,8 +86,8 @@ nav input {
 
 @media (max-width: 400px) {
     #title h1{
-        margin: 0;
-        position: absolute;
+        margin: 20px;
+        position: relative;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -96,6 +97,9 @@ nav input {
 
     #title{
         height: 500px;
+        position: relative;
+        background-position: center;
+
         
     }
 }
@@ -116,7 +120,7 @@ nav input {
     #title p{
         margin: 0;
         position: absolute;
-        top: 60%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
@@ -192,6 +196,18 @@ nav input {
     width:60%;
     height:400px;
 }
+@media (max-width: 400px) {
+    #destinations{
+        padding: 10px;
+        padding-bottom: 50px;
+
+    }
+    #gmap_canvas{
+        width:80%;
+        height:300px;
+    }
+}
+
 
 #packing{
     display: flex;
