@@ -86,9 +86,10 @@ nav input {
 
 @media (max-width: 400px) {
     #title h1{
-        margin: 20px;
+        margin: 5px;
         position: relative;
-        top: 40%;
+        text-align: center;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
@@ -105,7 +106,6 @@ nav input {
     }
 }
 
-
 #title p{
     margin: 0;
     position: absolute;
@@ -121,6 +121,7 @@ nav input {
     #title p{
         margin: 0;
         position: absolute;
+        text-align: center;
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -290,7 +291,7 @@ nav input {
 #content-planning{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-content: flex-start;
     margin: 10px;
     padding: 30px;
@@ -305,12 +306,16 @@ nav input {
     width: 250px;
     border: white 2px solid;
     border-radius: 10px;
-    margin: 20px;
+    margin: 30px;
 }
 
 #recommandation{
     color: black;
     background-color: white;
+}
+
+#recommandation h3{
+    color:RGB(199, 21, 133);
 }
 
 #content-planning img{
@@ -324,6 +329,7 @@ nav input {
 #content-planning input{
     padding: 10px;
     margin: 10px;
+    font-family: 'Comfortaa', cursive;
 }
 
 

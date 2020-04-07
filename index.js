@@ -106,6 +106,112 @@ function australia() {
 
 }
 
+// Planning section
+
+let europeArr = [
+  { 
+    continent: "Europe",
+    country: "Switzerland",
+    bestMonth: [11, 12, 1, 2],
+    budget: [3]
+  },
+  { 
+    continent: "Europe",
+    country: "Portugal",
+    bestMonth: [3, 4, 5],
+    budget: [1, 2]
+  },
+  { 
+    continent: "Europe",
+    country: "France",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [2, 3]
+  },
+  { 
+    continent: "Europe",
+    country: "Austria",
+    bestMonth: [11, 12, 1, 2],
+    budget: [1, 2]
+  },
+  { 
+    continent: "Europe",
+    country: "England",
+    bestMonth: [3, 4, 5],
+    budget: [3]
+  },
+  { 
+    continent: "Europe",
+    country: "Poland",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [1]
+  },
+  { 
+    continent: "Asia",
+    country: "Singapour",
+    bestMonth: [11, 12, 1, 2],
+    budget: [3]
+  },
+  { 
+    continent: "Asia",
+    country: "China",
+    bestMonth: [3, 4, 5],
+    budget: [1, 2]
+  },
+  { 
+    continent: "Asia",
+    country: "Japan",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [2, 3]
+  },
+  { 
+    continent: "Asia",
+    country: "Thailand",
+    bestMonth: [11, 12, 1, 2],
+    budget: [1, 2]
+  },
+  { 
+    continent: "Asia",
+    country: "Taiwan",
+    bestMonth: [3, 4, 5],
+    budget: [3]
+  },
+  { 
+    continent: "Asia",
+    country: "Nepal",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [2]
+  },
+];
+
+
+// Getting value of month input, changing value to number, fetching best country for number
+document.querySelector('#planning input').onchange = function(){
+
+  let chosenMonth = document.querySelector('#planning input').value
+  let newFormat = Number(chosenMonth.split("-")[1])
+  console.log('this is the chosen month by user:', newFormat)
+
+  let printedCountry = europeArr.filter(el => el.bestMonth.includes(newFormat))
+  console.log('this is the recommended country:', printedCountry[0].country)
+}
+
+//Same for budget
+document.querySelector('#budget').onchange = function(){
+
+let selectedBudget = $("#budget").val();
+let newBudgetFormat = Number(selectedBudget)
+console.log('budget chosen by user:', newBudgetFormat)
+
+
+// Applying Month and Budget filter
+let printedCountry2 = europeArr.filter(el => el.budget.includes(newBudgetFormat) && el.bestMonth.includes(Number(document.querySelector('#planning input').value.split("-")[1])))
+console.log('this is the recommended country:', printedCountry2[0].country)
+
+
+
+document.querySelector('#recommandation h3').innerHTML = printedCountry2[0].country
+}
+
 
 //Responsive navbar
 

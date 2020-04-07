@@ -40,7 +40,7 @@
     <p>Which part of the world do you want to disover? </p>
   </article>
 </a>
-<a href="#">
+<a href="#planning">
   <article>
     <img src="Calender.png" alt="calender">
     <h2>Plan you trip</h2>
@@ -60,7 +60,7 @@
   <article>
     <img src="tip-icon-6.jpg" alt="lightbulb">
     <h2>Tips and tricks</h2> 
-  <p>to help you survive</p>
+  <p>To help you survive</p>
   </article>
 </a>
 </div>
@@ -301,23 +301,23 @@
     <article>
         <img src="Calender.png" alt="calender">
         <p>Select your date of departure: </p>
-        <input type="month">
+        <input id= "month-input" type="month">
     </article>
     <article>
         <img src="dollars-money-bag.png" alt="money">
         <p>Select your budget range: </p>
         <select id="budget" name="budget">
           <option disabled selected>Select Your Budget</option>
-          <option id="low-budget">Low budget</option>
-          <option id="average-budget">Average buget</option>
-          <option id="high-budget">High-budget</option>
+          <option value="1" id="low-budget">Low budget</option>
+          <option value="2" id="average-budget">Average buget</option>
+          <option value="3" id="high-budget">High-budget</option>
         </select>
     </article>    
     <article id="recommandation">
       <img src="global.png" alt="earth">
       <p>Our recommandation for your trip: </p>
       <div id = "recommandation">
-        <h3>Country</h3>
+        <h3></h3>
       </div>
     </article>
   </div>
