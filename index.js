@@ -21,6 +21,7 @@ let suitcase = document.querySelector('#suitcase');
 
 
 select.onchange = function () {
+  console.log('onchange working')
   let selectedCountry = $("#continents").val();
   if (selectedCountry === "Asia") {
     asia()
@@ -108,119 +109,230 @@ function australia() {
 
 // Planning section
 
-let europeArr = [
-  { 
+let destinationsArr = [{
     continent: "Europe",
     country: "Switzerland",
     bestMonth: [11, 12, 1, 2],
     budget: [3]
   },
-  { 
+  {
     continent: "Europe",
     country: "Portugal",
     bestMonth: [3, 4, 5],
     budget: [1, 2]
   },
-  { 
+  {
     continent: "Europe",
     country: "France",
     bestMonth: [6, 7, 8, 9, 10],
     budget: [2, 3]
   },
-  { 
+  {
     continent: "Europe",
     country: "Austria",
     bestMonth: [11, 12, 1, 2],
     budget: [1, 2]
   },
-  { 
+  {
     continent: "Europe",
     country: "England",
     bestMonth: [3, 4, 5],
     budget: [3]
   },
-  { 
+  {
     continent: "Europe",
     country: "Poland",
     bestMonth: [6, 7, 8, 9, 10],
     budget: [1]
   },
-  { 
+  {
     continent: "Asia",
     country: "Singapour",
     bestMonth: [11, 12, 1, 2],
     budget: [3]
   },
-  { 
+  {
     continent: "Asia",
     country: "China",
     bestMonth: [3, 4, 5],
     budget: [1, 2]
   },
-  { 
+  {
     continent: "Asia",
     country: "Japan",
     bestMonth: [6, 7, 8, 9, 10],
     budget: [2, 3]
   },
-  { 
+  {
     continent: "Asia",
     country: "Thailand",
     bestMonth: [11, 12, 1, 2],
     budget: [1, 2]
   },
-  { 
+  {
     continent: "Asia",
     country: "Taiwan",
     bestMonth: [3, 4, 5],
     budget: [3]
   },
-  { 
+  {
     continent: "Asia",
     country: "Nepal",
     bestMonth: [6, 7, 8, 9, 10],
-    budget: [2]
+    budget: [1]
+  },
+  {
+    continent: "Americas",
+    country: "Chile",
+    bestMonth: [11, 12, 1, 2],
+    budget: [3]
+  },
+  {
+    continent: "Americas",
+    country: "Bolivia",
+    bestMonth: [3, 4, 5],
+    budget: [1, 2]
+  },
+  {
+    continent: "Americas",
+    country: "Canada",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [2, 3]
+  },
+  {
+    continent: "Americas",
+    country: "Panama",
+    bestMonth: [11, 12, 1, 2],
+    budget: [1, 2]
+  },
+  {
+    continent: "Americas",
+    country: "US",
+    bestMonth: [3, 4, 5],
+    budget: [3]
+  },
+  {
+    continent: "Americas",
+    country: "Belize",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [1]
+  },
+  //Africa
+  {
+    continent: "Africa",
+    country: "Kenya",
+    bestMonth: [11, 12, 1, 2],
+    budget: [3]
+  },
+  {
+    continent: "Africa",
+    country: "Morocco",
+    bestMonth: [3, 4, 5],
+    budget: [1, 2]
+  },
+  {
+    continent: "Africa",
+    country: "South Africa",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [2, 3]
+  },
+  {
+    continent: "Africa",
+    country: "Cameroun",
+    bestMonth: [11, 12, 1, 2],
+    budget: [1, 2]
+  },
+  {
+    continent: "Africa",
+    country: "Algeria",
+    bestMonth: [3, 4, 5],
+    budget: [3]
+  },
+  {
+    continent: "Africa",
+    country: "Togo",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [1]
+  },
+  {
+    continent: "Africa",
+    country: "Kenya",
+    bestMonth: [11, 12, 1, 2],
+    budget: [3]
+  },
+  //Australia
+  {
+    continent: "Australia",
+    country: "Australia",
+    bestMonth: [3, 4, 5],
+    budget: [1, 2]
+  },
+  {
+    continent: "Australia",
+    country: "New Zealand ",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [2, 3]
+  },
+  {
+    continent: "Australia",
+    country: "Tasmania",
+    bestMonth: [11, 12, 1, 2],
+    budget: [1, 2]
+  },
+  {
+    continent: "Australia",
+    country: "New Caledonia",
+    bestMonth: [3, 4, 5],
+    budget: [3]
+  },
+  {
+    continent: "Australia",
+    country: "Fiji Islands",
+    bestMonth: [6, 7, 8, 9, 10],
+    budget: [1]
   },
 ];
 
 
-// Getting value of month input, changing value to number, fetching best country for number
-document.querySelector('#planning input').onchange = function(){
+let continentChosen = true
 
-  let chosenMonth = document.querySelector('#planning input').value
-  let newFormat = Number(chosenMonth.split("-")[1])
-  console.log('this is the chosen month by user:', newFormat)
+// Setting a variable to make sure the destination has been chosen before the filters get applied
 
-  let printedCountry = europeArr.filter(el => el.bestMonth.includes(newFormat))
-  console.log('this is the recommended country:', printedCountry[0].country)
+let list = document.querySelector('#continents')
+
+list.onclick = function () {
+  continentChosen = true;
+  return continentChosen
 }
 
-//Same for budget
-document.querySelector('#budget').onchange = function(){
+// Applying Destination, Month and Budget filter
 
-let selectedBudget = $("#budget").val();
-let newBudgetFormat = Number(selectedBudget)
-console.log('budget chosen by user:', newBudgetFormat)
+let dropdownElements = document.querySelectorAll('.dropdown')
+for (let i = 0; i < dropdownElements.length; i++) {
 
+  dropdownElements[i].onchange = function () {
 
-// Applying Month and Budget filter
-let printedCountry2 = europeArr.filter(el => el.budget.includes(newBudgetFormat) && el.bestMonth.includes(Number(document.querySelector('#planning input').value.split("-")[1])))
-console.log('this is the recommended country:', printedCountry2[0].country)
+    if (continentChosen === false) {
+      alert('You need to select your destination in the packing section first :)')
+    } else {
+      let printedCountry2 = destinationsArr.filter(el => el.budget.includes(Number($("#budget").val())) &&
+        el.bestMonth.includes(Number(document.querySelector('#planning input').value.split("-")[1])) &&
+        el.continent.includes($("#continents").val()))
+   console.log('this is the recommended country:', printedCountry2[0].country)
 
-
-
-document.querySelector('#recommandation h3').innerHTML = printedCountry2[0].country
+    document.querySelector('#recommandation h3').innerHTML = printedCountry2[0].country
+    }
+  }
 }
-
 
 //Responsive navbar
 
 let menu = document.querySelector('nav img')
 let menuItems = document.querySelectorAll('nav li')
-  menu.onclick = function() {
-    for (let i=0; i<menuItems.length; i++){
-      if (menuItems[i].style.display === 'none'){
-        menuItems[i].style.display = 'block'
+menu.onclick = function () {
+  for (let i = 0; i < menuItems.length; i++) {
+    if (menuItems[i].style.display === 'none') {
+      menuItems[i].style.display = 'block'
     } else {
       menuItems[i].style.display = 'none'
     }
@@ -230,7 +342,7 @@ let menuItems = document.querySelectorAll('nav li')
 // Display text on images when hovered
 
 let images = document.querySelectorAll('.hover-tip')
-for (let i = 0; i <= images.length; i++){
+for (let i = 0; i <= images.length; i++) {
   document.querySelectorAll('.hover-tip p')[i].style.display = 'none'
   images[i].onmouseover = function () {
     document.querySelectorAll('.hover-tip p')[i].style.display = 'block'

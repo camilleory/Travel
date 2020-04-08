@@ -68,6 +68,7 @@
 <section id="destinations">
   <div>
     <h2>Pick a place !</h2>
+    <p>Browse the map to get some inspiration !</p>
   </div>
   <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 </section>
@@ -76,7 +77,7 @@
     <h2>Got everything ?</h2>
   <p>Select your destination - your packing list will be adapted.</p>
 </div>
-  <div><select id="continents" name="continents">
+  <div><select id="continents" name="continents" class="dropdown">
     <option disabled selected>Select Your Destination:</option>
     <option id="Europe">Europe</option>
     <option id="Asia">Asia</option>
@@ -297,16 +298,17 @@
 
 <section id="planning">
   <h2>Let's plan a bit</h2>
+  <p>Enter your departure date and budget range - We give you the most suitable country for your trip !</p>
   <div id="content-planning">
     <article>
         <img src="Calender.png" alt="calender">
         <p>Select your date of departure: </p>
-        <input id= "month-input" type="month">
+        <input id= "month-input" type="month" class="dropdown">
     </article>
     <article>
         <img src="dollars-money-bag.png" alt="money">
         <p>Select your budget range: </p>
-        <select id="budget" name="budget">
+        <select id="budget" name="budget" class="dropdown">
           <option disabled selected>Select Your Budget</option>
           <option value="1" id="low-budget">Low budget</option>
           <option value="2" id="average-budget">Average buget</option>
