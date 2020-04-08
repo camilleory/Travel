@@ -20,9 +20,10 @@ let tourist = document.querySelectorAll('.packing-stuff')[5]
 let suitcase = document.querySelector('#suitcase');
 
 
-select.onchange = function () {
-  console.log('onchange working')
+select.onselect = function () {
   let selectedCountry = $("#continents").val();
+  console.log('onchange working')
+
   if (selectedCountry === "Asia") {
     asia()
   }
@@ -294,13 +295,14 @@ let destinationsArr = [{
 ];
 
 
-let continentChosen = true
 
 // Setting a variable to make sure the destination has been chosen before the filters get applied
 
-let list = document.querySelector('#continents')
+//let list = document.querySelector('#continents')
 
-list.onclick = function () {
+let continentChosen = false
+
+select.onclick = function () {
   continentChosen = true;
   return continentChosen
 }
@@ -309,7 +311,7 @@ list.onclick = function () {
 
 let dropdownElements = document.querySelectorAll('.dropdown')
 for (let i = 0; i < dropdownElements.length; i++) {
-
+  console.log('hello?')
   dropdownElements[i].onchange = function () {
 
     if (continentChosen === false) {
@@ -319,7 +321,7 @@ for (let i = 0; i < dropdownElements.length; i++) {
         el.bestMonth.includes(Number(document.querySelector('#planning input').value.split("-")[1])) &&
         el.continent.includes($("#continents").val()))
    console.log('this is the recommended country:', printedCountry2[0].country)
-
+      
     document.querySelector('#recommandation h3').innerHTML = printedCountry2[0].country
     }
   }
