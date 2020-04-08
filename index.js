@@ -10,7 +10,7 @@ function myMap() {
 
 // Selection menu
 
-let select = document.querySelector('#continents')
+let select = document.querySelector('#trip-type')
 let health = document.querySelectorAll('.packing-stuff')[0]
 let cloth = document.querySelectorAll('.packing-stuff')[1]
 let sun = document.querySelectorAll('.packing-stuff')[2]
@@ -20,23 +20,23 @@ let tourist = document.querySelectorAll('.packing-stuff')[5]
 let suitcase = document.querySelector('#suitcase');
 
 
-select.onselect = function () {
-  let selectedCountry = $("#continents").val();
+select.onchange = function () {
+  let selectedCountry = $("#trip-type").val();
   console.log('onchange working')
 
-  if (selectedCountry === "Asia") {
+  if (selectedCountry === "Chill") {
     asia()
   }
-  if (selectedCountry === "Africa") {
+  if (selectedCountry === "Adventurous") {
     africa()
   }
-  if (selectedCountry === "Europe") {
+  if (selectedCountry === "Sporty") {
     europe()
   }
-  if (selectedCountry === "Americas") {
+  if (selectedCountry === "Cultural") {
     americas()
   }
-  if (selectedCountry === "Australia") {
+  if (selectedCountry === "Crazy") {
     australia()
   }
   if (selectedCountry === "choice") {
@@ -295,14 +295,15 @@ let destinationsArr = [{
 ];
 
 
-
 // Setting a variable to make sure the destination has been chosen before the filters get applied
-
-//let list = document.querySelector('#continents')
 
 let continentChosen = false
 
-select.onclick = function () {
+let list = document.querySelector('#continents')
+
+
+list.onclick = function () {
+  console.log('hello list')
   continentChosen = true;
   return continentChosen
 }
@@ -315,14 +316,14 @@ for (let i = 0; i < dropdownElements.length; i++) {
   dropdownElements[i].onchange = function () {
 
     if (continentChosen === false) {
-      alert('You need to select your destination in the packing section first :)')
+      alert('You need to select your destination first :)')
     } else {
       let printedCountry2 = destinationsArr.filter(el => el.budget.includes(Number($("#budget").val())) &&
         el.bestMonth.includes(Number(document.querySelector('#planning input').value.split("-")[1])) &&
         el.continent.includes($("#continents").val()))
-   console.log('this is the recommended country:', printedCountry2[0].country)
-      
-    document.querySelector('#recommandation h3').innerHTML = printedCountry2[0].country
+      console.log('this is the recommended country:', printedCountry2[0].country)
+
+      document.querySelector('#recommandation h3').innerHTML = printedCountry2[0].country
     }
   }
 }

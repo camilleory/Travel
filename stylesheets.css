@@ -26,6 +26,8 @@ nav{
 nav img{
     width: 30px;
     display: none;
+    align-self: flex-start;
+    margin: 10px;
 }
 
 a{
@@ -88,7 +90,7 @@ nav input {
     #title h1{
         margin: 5px;
         position: relative;
-        text-align: center;
+        text-align: center; 
         top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -101,12 +103,14 @@ nav input {
         position: relative;
         background-image: url(./Photos/2.1_Tinghir-min.JPG);
         background-position: center;
+        background-size: cover;
+
 
         
     }
 }
-
-@media (max-width: 1050px) {
+/* 
+@media screen (min-width: 400) and (max-width: 1050px) {
     #title h1{
         margin: 5px;
         position: relative;
@@ -117,7 +121,7 @@ nav input {
         color: white;
         font-size: 50px;
     }
-}
+} */
 
 #title p{
     margin: 0;
@@ -133,9 +137,9 @@ nav input {
 @media (max-width: 400px) {
     #title p{
         margin: 0;
-        position: absolute;
+        position: relative;
         text-align: center;
-        top: 70%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
@@ -144,7 +148,7 @@ nav input {
         width: 250px;
     }   
 }
-@media (max-width: 1050px) {
+/* @media (min-width: 400, max-width: 1050px) {
     #title p{
         margin: 0;
         position: relative;
@@ -155,7 +159,7 @@ nav input {
         font-size: 20px;
         font-weight: bold;
     }
-}
+} */
 
 #first-second-title{
     display: flex;
@@ -325,7 +329,7 @@ nav input {
 }
 #planning p{
     padding-bottom: 0;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -345,7 +349,7 @@ nav input {
     padding:15px;
     padding-top: 30px;
     text-align: center;
-    width: 230px;
+    width: 200px;
     border: white 2px solid;
     border-radius: 10px;
     margin: 30px;

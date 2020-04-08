@@ -40,22 +40,37 @@
     <p>Which part of the world do you want to disover? </p>
   </article>
 </a>
-<a href="#planning">
+<!-- <a href="#planning">
   <article>
     <img src="Calender.png" alt="calender">
     <h2>Plan you trip</h2>
   <p>A bit of organisation for a better trip.</p>
 </article>
-</a>
-</div>
-<div class="articles">
-  <a href="#packing">
+</a> -->
+<a href="#packing">
   <article>
     <img src="suitcase.png" alt="suitcase">
     <h2> What you should pack</h2>
     <p>Some very useful items</p>
   </article>
 </a>
+</div>
+
+<div class="articles">
+  <a href="#planning">
+    <article>
+      <img src="Calender.png" alt="calender">
+      <h2>Plan you trip</h2>
+    <p>A bit of organisation for a better trip.</p>
+  </article>
+  </a>
+  <!-- <a href="#packing">
+  <article>
+    <img src="suitcase.png" alt="suitcase">
+    <h2> What you should pack</h2>
+    <p>Some very useful items</p>
+  </article>
+</a> -->
 <a href="#tips">
   <article>
     <img src="tip-icon-6.jpg" alt="lightbulb">
@@ -75,16 +90,15 @@
 <section id="packing">
   <div>
     <h2>Got everything ?</h2>
-  <p>Select your destination - your packing list will be adapted.</p>
+  <p>Select the trip you aim for - your packing list will be adapted.</p>
 </div>
-  <div><select id="continents" name="continents" class="dropdown">
-    <option disabled selected>Select Your Destination:</option>
-    <option id="Europe">Europe</option>
-    <option id="Asia">Asia</option>
-    <option id="Americas">Americas</option>
-    <option id="Africa">Africa</option>
-    <option id="Australia">Australia</option>
-
+  <div><select id="trip-type" name="trip-type">
+    <option disabled selected>Select Your Trip Type</option>
+    <option id="Chill">Chill</option>
+    <option id="Adventurous">Adventurous</option>
+    <option id="Sporty">Sporty</option>
+    <option id="Cultural">Cultural</option>
+    <option id="Crazy">Crazy</option>
   </select>
 </div>
   <img id="suitcase" src="suitcase.png" alt="suitcase">
@@ -298,8 +312,22 @@
 
 <section id="planning">
   <h2>Let's plan a bit</h2>
-  <p>Enter your departure date and budget range - We give you the most suitable country for your trip !</p>
+  <p>Enter your destination, departure date and budget range - We give you the most suitable country for your trip</p>
   <div id="content-planning">
+    <article>
+      <img src="pngfuel.com.png" alt="money">
+      <p>Select your destination</p>
+      <select id="continents" name="continents" class="dropdown">
+      <option disabled selected>Select Your Destination</option>
+      <option id="Europe">Europe</option>
+      <option id="Asia">Asia</option>
+      <option id="Americas">Americas</option>
+      <option id="Africa">Africa</option>
+      <option id="Australia">Australia</option>
+  
+    </select>
+  </article>
+
     <article>
         <img src="Calender.png" alt="calender">
         <p>Select your date of departure: </p>
