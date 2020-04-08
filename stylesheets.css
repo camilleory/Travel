@@ -103,7 +103,6 @@ nav input {
         position: relative;
         background-image: url(./Photos/2.1_Tinghir-min.JPG);
         background-position: center;
-        background-size: cover;
 
 
         
@@ -353,7 +352,7 @@ nav input {
     border: white 2px solid;
     border-radius: 10px;
     margin: 30px;
-    height: 250px;
+    height: 220px;
 }
 
 #recommandation{
